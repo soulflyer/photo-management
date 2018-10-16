@@ -12,9 +12,9 @@ Everyone is different and there is no garuantee that these tools will play nicel
 My workflow goes something like this:
 
 * Photo processing using whatever program is best for the shoot. Usually this is the excellent [darktable](https://www.darktable.org/). Then export to ~/Pictures/fullsize/yyyy/mm/project
-* Add watermark info using Watermarker
-* Export various sizes of pictures, with watermark, using the `versions` script. This automatically calls `save-meta` to add the picture details to the database for `hinh-anh` and other tools.
-* Add keywords and refine ratings using `hinh-anh`
+* Add watermark info using [watermarker](#watermarker)
+* Export various sizes of pictures, with watermark, using the [versions](#versions) script. This automatically calls [save-meta](#save-meta) to add the picture details to the database for [hinh-anh](#hinh-anh) and other tools.
+* Add keywords and refine ratings using [hinh-anh](#hinh-anh)
 * run `backup-to-soulflyer` which uses rsync to send the newly exported pics to the web host machine.
 
 ## File sytem organisation
