@@ -1,6 +1,6 @@
 # photo-management
 An overview of Soulflyer image management tools
-
+![hinh-anh image](images/hinh-anh.png)
 These tools are designed to help speed up photo management and enable a photographer to locate images quickly and easily. The key to this is fast and effective keywording. None of the current photo processing packages seems to do this quite right, although some are better than others. The aim here is to allow commonly used keywords to be applied with only 1 or 2 keystrokes per photo and less commonly used ones with only a few more by making good use of autocompletion and keyboard shortcuts. Finding photos should be similarly easy. 
 
 With a little preparation these tools, focused around the **hinh-anh** photo manager, will do that.
@@ -11,7 +11,7 @@ Everyone is different and there is no garuantee that these tools will play nicel
 
 My workflow goes something like this:
 
-* Photo processing using whatever program is best for the shoot. Usually this is the excellent [darktable] (https://www.darktable.org/). Then export to ~/Pictures/fullsize/yyyy/mm/project
+* Photo processing using whatever program is best for the shoot. Usually this is the excellent [darktable](https://www.darktable.org/). Then export to ~/Pictures/fullsize/yyyy/mm/project
 * Add watermark info using Watermarker
 * Export various sizes of pictures, with watermark, using the `versions` script. This automatically calls `save-meta` to add the picture details to the database for `hinh-anh` and other tools.
 * Add keywords and refine ratings using `hinh-anh`
