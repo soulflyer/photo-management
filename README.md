@@ -33,23 +33,23 @@ It is possible to work with just this one directory of pictures but it is a litt
 * medium fits in 1024px
 * large  fits in 2048px
 
-Normally I just use the medium for keywording purposes.
+Normally I just use the medium directory for keywording purposes.
 
 ## Tools
 
 ## save-meta
 
-This reads the metadata from an image or a directory of images and stores it in the database. It can be called from the command line or from a script. This is available [here] (https://github.com/soulflyer/metadata-mongo) 
+This reads the metadata from an image or a directory of images and stores it in the database. It can be called from the command line or from a script. This is available [here](https://github.com/soulflyer/metadata-mongo).
 
 It is called by the script that creates watermarked versions of the photos, but could also be run as part of the export from whatever processing program is used.
 
 ## versions
 
-Creates the various sizes of photos for publication and use on the web. It adds the watermark, setting the position and strength according to the values saved in special instructions if they are present. Also triggers save-meta to add the photo details to the database. This is available as part of the **publish** repository available [here](https://github.com/soulflyer/publish) It relies on **convert** which is part of **Imagemagick** so you will need to install that and ensure it is on your path.
+Creates the various sizes of photos for publication and use on the web. It adds the watermark, setting the position and strength according to the values saved in special instructions if they are present. Also triggers save-meta to add the photo details to the database. This is available as part of the **publish** repository available [here](https://github.com/soulflyer/publish). It relies on **convert** which is part of **Imagemagick** so you will need to install that and ensure it is on your path.
 
 ## watermarker
 
-This is a mac only program that adds the watermark position and strength information to the image details in the database. It's available [here] (https://github.com/soulflyer/Watermarker) This functionality will eventually be added to **hinh-anh** so it is available to linux users too. It is possible to set the watermark information in SpecialInstructions by hand, but without the visualisation provided by **watermarker** this can be a bit fiddly. The format looks like this:
+This is a mac only program that adds the watermark position and strength information to the image details in the database. It's available [here](https://github.com/soulflyer/Watermarker). This functionality will eventually be added to **hinh-anh** so it is available to linux users too. It is possible to set the watermark information in SpecialInstructions by hand, but without the visualisation provided by **watermarker** this can be a bit fiddly. The format looks like this:
 
 BL14S12X02Y02
 
@@ -60,11 +60,11 @@ TODO:Move add-watermark out of the watermarker repository.
 
 ## hinh-anh
 
-This is used to rate, tag and search photos. Available [here] (https://github.com/soulflyer/hinh-anh) 
+This is used to rate, tag and search photos. Available [here](https://github.com/soulflyer/hinh-anh).
 
 ## image-search
 
-This can be called from the command line to perform simple searches. It can also be run in a clojure repl to do more complex searches. Either way can give a count of results found, open them in your default viewer, or write a list of the results to a file for further processing. This is available [here] (https://github.com/soulflyer/image-search)
+This can be called from the command line to perform simple searches. It can also be run in a clojure repl to do more complex searches. Either way can give a count of results found, open them in your default viewer, or write a list of the results to a file for further processing. This is available [here](https://github.com/soulflyer/image-search).
 
 ## image-lib
 
