@@ -7,24 +7,31 @@ With a little preparation these tools, focused around the **hinh-anh** photo man
 
 ## Workflow
 
-Everyone is different and there is no garuantee that these tools will play nicely with your own workflow. However they are designed to be used as a completely separate step after processing is finished so it should be ok. It makes no difference what tools you use to do the processing, and ratings and keywords should be picked up along with exif and IPTC data if you happen to apply them as part of that processing. As yet there is no provision  to write keywords and captions etc back to the master copies but it is on the TODO list.
+Everyone is different and there is no garuantee that these tools will play nicely with your own workflow. However they are designed to be used as a completely separate step after processing is finished so it should be ok. It makes no difference what tools you use to do the processing, and ratings and keywords will be picked up along with exif and IPTC data if you happen to apply them as part of that processing. As yet there is no provision to write keywords and captions etc back to the master copies but it is on the TODO list.
 
-My workflow pic goes here
+My workflow goes something like this:
+
+* Photo processing using whatever program is best for the shoot. Usually this is the excellent [darktable] (https://www.darktable.org/). Then export to ~/Pictures/fullsize/yyyy/mm/project
+* Add watermark info using Watermarker
+* Export various sizes of pictures, with watermark, using the `versions` script. This automatically calls `save-meta` to add the picture details to the database for `hinh-anh` and other tools.
+* Add keywords and refine ratings using `hinh-anh`
+* run `backup-to-soulflyer` which uses rsync to send the newly exported pics to the web host machine.
 
 ## File sytem organisation
 
-The processed master copies need to be accessible from a single path containing a directory structure like this:
+The processed master copies need to be accessible from a single path containing a `year/month/project` directory structure like this:
 
-year-month-project tree pic goes here
+
+![year-month-project tree pic goes here] (images/tree.png)
 
 If this doesn't match your organisation it should be easy enough to use sym links to create this structure. The year month project thing is a core assumption though and things are pretty much garuanteed to break if the file system doesn't conform to it.
 
-It is possible to work with just this one directory of pictures but it is a little slow when using the keywording tool on large collections. My pictures are all exported in various sizes and these can be used instead when they are available. They too must have the year-month-project structure but it is possible to specify where those trees live. It's also possible to have as many or as few as required. I currently use 4 directories 
+It is possible to work with just this one directory of pictures but it is a little slow when using the keywording tool on a large set of photos. My pictures are all exported in various sizes and these can be used instead when they are available. They too must have the year-month-project structure but it is possible to specify where those trees live. It's also possible to have as many or as few as required. I currently use 4 directories 
 
-thumbs fits in 160px
-small  fits in 512px
-medium fits in 1024px
-large  fits in 2048px
+* thumbs fits in 160px
+* small  fits in 512px
+* medium fits in 1024px
+* large  fits in 2048px
 
 Normally I just use the medium for keywording purposes.
 
@@ -42,7 +49,7 @@ Creates the various sizes of photos for publication and use on the web. It adds 
 
 ## watermarker
 
-This is a mac only program that adds the watermark position and strength information to the image details in the database. It's available [here] (https://github.com/soulflyer/Watermarker) This functionality will eventually be added to **hinh-anh** so it is available to linux users too. It is possible to set the watermark information by hand, but without the visualisation provided by **watermarker** this can be a bit fiddly. The format looks like this:
+This is a mac only program that adds the watermark position and strength information to the image details in the database. It's available [here] (https://github.com/soulflyer/Watermarker) This functionality will eventually be added to **hinh-anh** so it is available to linux users too. It is possible to set the watermark information in SpecialInstructions by hand, but without the visualisation provided by **watermarker** this can be a bit fiddly. The format looks like this:
 
 BL14S12X02Y02
 
