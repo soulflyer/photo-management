@@ -15,7 +15,8 @@ My workflow goes something like this:
 * Add watermark info using [watermarker](#watermarker)
 * Export various sizes of pictures, with watermark, using the [versions](#versions) script. This automatically calls [save-meta](#save-meta) to add the picture details to the database for [hinh-anh](#hinh-anh) and other tools.
 * Add keywords and refine ratings using [hinh-anh](#hinh-anh)
-* run `backup-to-soulflyer` which uses rsync to send the newly exported pics to the web host machine.
+* Use [hinh-anh](#hinh-anh) to export a JSON file containing a list of selected pictures for a particular customer. This JSON file is read by an angular script on the soulflyer web site which generates a web page for the customer. The JSON export also triggers the creation of a zip archive of all the selected photos. AngularCustomerPhotos can be found [here](https://github.com/soulflyer/AngularCustomerPhotos).
+* run `backup-to-soulflyer` which uses rsync to send the newly exported pics, json files and zip files to the web host machine.
 
 ## File sytem organisation
 
