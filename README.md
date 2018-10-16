@@ -22,7 +22,7 @@ My workflow goes something like this:
 The processed master copies need to be accessible from a single path containing a `year/month/project` directory structure like this:
 
 
-![year-month-project tree pic goes here] (images/tree.png)
+![year-month-project tree pic goes here](images/tree.png)
 
 If this doesn't match your organisation it should be easy enough to use sym links to create this structure. The year month project thing is a core assumption though and things are pretty much garuanteed to break if the file system doesn't conform to it.
 
