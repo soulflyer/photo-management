@@ -38,11 +38,6 @@ Normally I just use the medium directory for keywording purposes.
 
 ## Tools
 
-## save-meta
-
-This reads the metadata from an image or a directory of images and stores it in the database. It can be called from the command line or from a script. This is available [here](https://github.com/soulflyer/metadata-mongo).
-
-It is called by the script that creates watermarked versions of the photos, but could also be run as part of the export from whatever processing program is used.
 
 ## versions
 
@@ -63,10 +58,27 @@ TODO:Move add-watermark out of the watermarker repository.
 
 This is used to rate, tag and search photos. Available [here](https://github.com/soulflyer/hinh-anh).
 
-## image-search
-
-This can be called from the command line to perform simple searches. It can also be run in a clojure repl to do more complex searches. Either way can give a count of results found, open them in your default viewer, or write a list of the results to a file for further processing. This is available [here](https://github.com/soulflyer/image-search).
+## keywords
+Superseded by hinh-anh, but still working. Keywords is a seesaw app that can be used to explore keywords and open the associated pics. Available [here](https://github.com/soulflyer/find-pics)
 
 ## image-lib
 
 This is the heart of image-search and hinh-anh, but provided as a library for use in other situations.
+
+## database access tools
+### save-meta
+This reads the metadata from an image or a directory of images and stores it in the database. It can be called from the command line or from a script. This is available [here](https://github.com/soulflyer/metadata-mongo).
+
+It is called by the script that creates watermarked versions of the photos, but could also be run as part of the export from whatever processing program is used.
+
+### check-images
+Checks the contents of one of the picture directories against the database and reports on any missing images, possible due to forgetting to export them. Available [here](https://github.com/soulflyer/check-images)
+
+### image-search
+This can be called from the command line to perform simple searches. It can also be run in a clojure repl to do more complex searches. Either way can give a count of results found, open them in your default viewer, or write a list of the results to a file for further processing. This is available [here](https://github.com/soulflyer/image-search).
+
+### find-keywords
+Returns a list of all the keywords that are children of a given keyword. Available [here](https://github.com/soulflyer/find-keywords)
+
+### find-projects
+Returns a list of all projects currently in the db. Available [here](https://github.com/soulflyer/find-projects)
